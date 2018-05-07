@@ -1,0 +1,4 @@
+# Keep out autosaves.
+*~
+# Keep out Lisp fast-load files.
+*.fasl
