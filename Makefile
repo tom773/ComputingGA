@@ -1,4 +1,8 @@
-LISP=sbcl --load
+ifneq ("$(wildcard sbcl)","")
+LISP=./sbcl
+else
+LISP=sbcl
+endif
 
 website:
-	$(LISP) build.lisp --quit
+	$(LISP) --load build.lisp --quit

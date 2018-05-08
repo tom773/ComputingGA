@@ -7,6 +7,7 @@
 (use-package '(cl-who))
 
 (load "macros/bootstrap.lisp")
+(load "macros/disqus.lisp")
 
 (defmacro build-page (name &body page)
   `(progn

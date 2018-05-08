@@ -15,4 +15,5 @@
 	       (:li "XML has a case of"
 		    (:a :href "https://en.wikipedia.org/wiki/Not_invented_here" "NIH syndrome.")
 		    (:a :href "https://en.wikipedia.org/wiki/S-expression" "S-expressions")
-		    "are objectively better.")))))
+		    "are objectively better."))
+	      (comment-box))))
