@@ -6,14 +6,20 @@
 (in-package :html-build)
 (use-package '(cl-who))
 
-(load "bootstrap.lisp")
+(load "macros/bootstrap.lisp")
 
 (defmacro build-page (name &body page)
   `(progn
      (format t ,(concatenate 'string "Making " name "...~%"))
-     (with-open-file (fd ,name :direction :output :if-exists :supersede)
-       (with-html-output (fd nil :prologue t :indent t)
-	 ,@page))
-     (format t ,(concatenate 'string "Made " name "~%"))))
+     (handler-case
+	 (with-open-file (fd ,name :direction :output :if-exists :supersede)
+	   (with-html-output (fd nil :prologue t :indent t)
+	     ,@page))
+       (condition (condition)
+	 (format t "~a errored out with ~a:~%" ,name condition)
+	 (print (sb-debug:list-backtrace)))
+       (:no-error (meh)
+	 (declare (ignore meh))
+	 (format t ,(concatenate 'string "Made " name "~%"))))))
 
 (load "pages/test.lisp")
