@@ -10,6 +10,8 @@
 		(:link :rel "stylesheet"
 		       :href "https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
 		       :crossorigin "anonymous")
+		(:link :rel "stylesheet"
+		       :href "style/main.css")
 		(:script :src "https://code.jquery.com/jquery-3.3.1.slim.min.js"
 			 :crossorigin "anonymous")
 		(:script :src "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
@@ -40,10 +42,10 @@
 		,@(loop for item in options
 		     collect (if (eql item '--)
 				 `(htm (:div :class "dropdown-divider"))
-				 (if (consp item)
+				 (if (listp item)
 				     `(htm (:a :class "dropdown-item"
-					       :href ,(cdr item)
-					       ,(car item)))
+					       :href ,(second item)
+					       ,(first item)))
 				     `(htm (:div :class "dropdown-item"
 						 ,item)))))))))
 
@@ -79,3 +81,12 @@
 (defmacro navbar-item (name link)
   `(htm
     (:a :class "nav-item nav-link" :href ,link ,name)))
+
+(defmacro image (name width &rest caption)
+  `(htm
+    (:div :class "img-container" :width ,width
+	  (:img :src ,name)
+	  (:br)
+	  ,@(when caption
+	      (loop for item in caption
+		   collect `(htm ,item))))))

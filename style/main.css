@@ -1,0 +1,15 @@
+.img-container {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border: white solid 4pt;
+    border-radius: 2pt;
+    display: inline-block;
+    text-align: center;
+    float: left;
+}
+.img-container > img {
+    width: 100%;
+}
+
+.footnote {
+    color: rgb(0,0,0,0.7);
+}

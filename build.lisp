@@ -1,13 +1,14 @@
-(ql:quickload 'cl-who)
+(ql:quickload '(cl-who split-sequence))
 (setf (cl-who:html-mode) :html5)
 
 (defpackage html-build
-  (:use :cl :cl-who))
+  (:use :cl :cl-who :split-sequence))
 (in-package :html-build)
 (use-package '(cl-who))
 
 (load "macros/bootstrap.lisp")
 (load "macros/disqus.lisp")
+(load "macros/footnotes.lisp")
 
 (defmacro build-page (name &body page)
   `(progn
@@ -23,4 +24,8 @@
 	 (declare (ignore meh))
 	 (format t ,(concatenate 'string "Made " name "~%"))))))
 
+;; Files to build go here.
+
 (load "pages/test.lisp")
+(load "pages/index.lisp")
+(load "pages/mtgox.lisp")
