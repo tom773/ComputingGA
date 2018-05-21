@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:700i');
+
 .img-container {
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     border: white solid 4pt;
@@ -12,4 +14,21 @@
 
 .footnote {
     color: rgb(0,0,0,0.7);
+}
+
+.fancy {
+    font-family: Ubuntu;
+    font-style: italic;
+    font-size: 300%;
+}
+
+.navbar {
+    border-bottom: 2pt #e9ecef solid;
+    @media only screen and (max-width: 1000px) {
+	padding-left: 50pt;
+    }
+}
+
+.jumbotron {
+    margin-bottom: 0pt;
 }

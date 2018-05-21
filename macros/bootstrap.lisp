@@ -90,3 +90,13 @@
 	  ,@(when caption
 	      (loop for item in caption
 		   collect `(htm ,item))))))
+
+(defmacro columns (&body columns)
+  `(htm
+    (:div :class "row"
+	  ,@columns)))
+
+(defmacro column (width &body content)
+  `(htm
+    (:div :class ,(format nil "col-md-~d" (floor (* width 12)))
+	  ,@content)))
