@@ -2,8 +2,10 @@
 	    (simple-page
 	     (:title "news")
 	     (navbar)
-	     (header
-	      (:h1 :class "fancy" "A News Website"))
+	     (logo-header
+	      (:h1
+	       (:img :src "/images/logo.svg" :id "logo")
+	       "BitCONEEEEEECT NEWS!"))
 	     (navbar
 	       (with-open-file (links "resources/links.lisp" :direction :input)
 		 (loop for (title url) in (read links)

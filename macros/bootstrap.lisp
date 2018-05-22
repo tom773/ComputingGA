@@ -27,6 +27,10 @@
   `(htm (:div :class "jumbotron text-center"
 	      ,@body)))
 
+(defmacro logo-header (&body body)
+  `(htm (:div :class "jumbotron text-center bg-logo"
+	      ,@body)))
+
 (defmacro container (&body body)
   `(htm (:div :class "container"
 	      ,@body)))
