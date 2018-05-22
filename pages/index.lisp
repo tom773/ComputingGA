@@ -4,8 +4,9 @@
 	     (site-header)
 	     (container
 	      (columns
-	       (loop for (title url desc) in *links*
+	       (loop for (title url desc image) in *links*
 		  when desc
 		  do (column 1/2
-		      (:h2 (:a :href url (esc title)))
-		      (esc desc)))))))
+			     (:img :src image :class "story-image" :width "100%")
+			     (:h2 (:a :href url (esc title)))
+			     (esc desc)))))))

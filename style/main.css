@@ -24,9 +24,6 @@
 
 .navbar {
     border-bottom: 2pt #e9ecef solid;
-    @media only screen and (max-width: 1000px) {
-	padding-left: 50pt;
-    }
 }
 
 .jumbotron {
@@ -37,7 +34,6 @@
     background-image: url("/images/bitconeect.jpeg");
     background-size: 100% auto;
     background-attachment: fixed;
-    background-position: center;
     color: var(--white);
     text-shadow: 1pt 2pt 0pt var(--gray-dark);
 }
@@ -49,4 +45,15 @@
 h1 {
     font-family: Ubuntu;
     font-style: italic;
+    @media only screen and (max-width: 1000px) {
+	font-size: 75%;
+    }
+}
+
+.story-image {
+    width: 100%;
+    margin-top: 6pt;
+    border-radius: 3pt;
+    object-fit: cover;
+    height: 75%;
 }
