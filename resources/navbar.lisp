@@ -1,0 +1,3 @@
+(
+ ("Home" "/")
+ ("Stories" "/stories.html"))

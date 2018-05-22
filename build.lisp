@@ -9,6 +9,7 @@
 (load "macros/bootstrap.lisp")
 (load "macros/disqus.lisp")
 (load "macros/footnotes.lisp")
+(load "resources/header.lisp")
 
 (defmacro build-page (name &body page)
   `(progn
@@ -27,5 +28,6 @@
 ;; Files to build go here.
 
 (load "pages/test.lisp")
+(load "pages/stories.lisp")
 (load "pages/index.lisp")
 (load "pages/mtgox.lisp")
