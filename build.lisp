@@ -31,3 +31,4 @@
 (load "pages/stories.lisp")
 (load "pages/index.lisp")
 (load "pages/mtgox.lisp")
+(load "pages/ethereum.lisp")
