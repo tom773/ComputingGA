@@ -8,7 +8,7 @@
   '(progn
     (logo-header
      (:h1
-      (:img :src "/images/logo.svg" :id "logo")
+      (:img :alt "a modified Bitcoin logo that looks like a penis." :src "/images/logo.svg" :id "logo")
       "BitCONEEEEEEECT NEWS!"))
     (navbar
      (loop for (title url) in *navbar*

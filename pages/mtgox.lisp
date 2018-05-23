@@ -19,4 +19,5 @@
 	      (:h2 "Bitcoin theft")
 	      "From 7 Feburary 2014, Mt Gox started showing issues. Withdrawls were halted, after the owners discovered transactions could be modified (\"malleability\") while still appearing valid to Bitcoin nodes. "
 	      (:hr)
-	      (footnote-collector))))
+	      (footnote-collector)
+	      (comment-box))))

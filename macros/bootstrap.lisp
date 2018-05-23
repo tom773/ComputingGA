@@ -4,7 +4,7 @@
 			     head-stuff
 			     (language "en"))
 		       &body body)
-  `(htm (:html :language ,language
+  `(htm (:html 
 	       (:head
 		(:title ,title)
 		(:link :rel "stylesheet"
@@ -92,7 +92,8 @@
 
 (defmacro navbar-item (name link)
   `(htm
-    (:a :class "navbar-item nav-link" :href ,link ,name)))
+    (:li :class "navbar-item"
+	 (:a :class "nav-link" :href ,link ,name))))
 
 (defmacro image (name width &rest caption)
   `(htm
