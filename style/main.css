@@ -40,6 +40,11 @@
 
 #logo {
     height: 1.5em;
+    transition: transform 0.5s;
+}
+
+#logo:hover {
+    transform: rotate(720deg);
 }
 
 h1 {
@@ -56,4 +61,11 @@ h1 {
     border-radius: 3pt;
     object-fit: cover;
     height: 75%;
+    transition: transform 0.3s;
+    position: relative;
+}
+
+.story-image:hover {
+    transform: scale(1.2);
+    z-index: 999;
 }

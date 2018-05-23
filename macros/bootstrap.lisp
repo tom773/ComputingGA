@@ -1,8 +1,7 @@
 (in-package :html-build)
 	    
 (defmacro simple-page ((&key title
-			     head-stuff
-			     (language "en"))
+			     head-stuff)
 		       &body body)
   `(htm (:html 
 	       (:head

@@ -7,6 +7,6 @@
 	       (loop for (title url desc image) in *links*
 		  when desc
 		  do (column 1/2
-			     (:img :src image :class "story-image" :width "100%")
+			     (:a :href url (:img :src image :class "story-image" :width "100%"))
 			     (:h2 (:a :href url (esc title)))
 			     (esc desc)))))))
