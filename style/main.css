@@ -69,3 +69,7 @@ h1 {
     transform: scale(1.2);
     z-index: 999;
 }
+
+.maths {
+    font-family: CMU Serif, serif;
+}

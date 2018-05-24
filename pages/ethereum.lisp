@@ -4,15 +4,17 @@
 	     (site-header)
 	     (container
 	      (:h1 "Ethereum and The DAO")
-	      "Ethereum is a programmable cryptocurrency. What does that mean? You can make decisions about how to deal with the currency in the currency itself. Lost? Me too &mdash; so was The DAO, a group of people who wanted to use it to transparently and provably provide funds for startups."
+	      "Ethereum is a programmable cryptocurrency. What does that mean? You can make decisions about how to deal with the currency in the currency itself."
+	      "Lost? Me too. Lost too were The DAO, a group of people who wanted to use Ethereum to transparently and provably provide funds for startups."
 	      (:h2 "Bug Tracking")
 	      "On the 27th of May, 2016, researches"
 	      (:a :href "http://hackingdistributed.com/2016/05/27/dao-call-for-moratorium/" "found")
 	      "several possible weaknesses in the DAO's Ethereum scripts, which decide on if funds can be moved. The researches concluded:"
 	      (:blockquote
-	       "[Our] concerns motivate a moratorium on proposals to prevent losses due to poor mechanism design. A moratorium would give The DAO time to make critical security upgrades. We encourage the community to adopt a moratorium until The DAO can be updated.")
+	       "[Our] concerns motivate a moratorium on proposals to prevent losses due to poor mechanism design."
+	       "A moratorium would give The DAO time to make critical security upgrades. We encourage the community to adopt a moratorium until The DAO can be updated.")
 	      (:h2 "Breakdown")
-	      "The bugs were exploited on the __ of __. Approximately __ coins were seized, and several companies such as Hashflare"
+	      "The bugs were exploited on the 5th of June. Approximately 14000000 coins were seized, and several companies such as Hashflare"
 	      (footnote
 	       (:a :href "https://cointelegraph.com/news/the-dao-breach-stops-ether-miner"
 		   "The DAO Breach Stops Ether Miner"))

@@ -1,3 +1,3 @@
 (
- ("Home" "/")
- ("Stories" "/stories.html"))
+ ("Home" "index.html")
+ ("Stories" "stories.html"))
